@@ -1,5 +1,10 @@
-streamlit==1.28.0
-requests==2.31.0
-pandas==2.0.3
-python-dotenv==1.0.0
-plotly==5.17.0
+# Use specific older versions that work with Streamlit Cloud
+streamlit>=1.28.0,<1.30.0
+requests>=2.31.0,<3.0.0
+pandas>=2.0.3,<2.2.0
+plotly>=5.17.0,<6.0.0
+python-dotenv>=1.0.0,<2.0.0
+
+# Add these to prevent dependency conflicts
+typing-extensions>=4.0.0
+packaging>=23.0
