@@ -178,7 +178,10 @@ with col2:
         # Alert statistics
         st.markdown("### Alert Statistics")
         if not df_alerts.empty:
-            status_counts = df_alerts['status'].value_counts()
+    status_counts = df_alerts['status'].value_counts()
+    
+    # Use Streamlit's native chart instead of plotly
+    st.bar_chart(status_counts)
             
             fig = go.Figure(data=[go.Pie(
                 labels=status_counts.index,
